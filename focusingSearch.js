@@ -2,29 +2,16 @@
 'use strict'
 
 
-/*
-	ArrowDown : 40
-	ArrowRight : 39
-	ArrowUp : 38
-	ArrowLeft : 37
-
-let value = {
- 				ArrowDown : 40,
- 				ArrowRight : 39, 
- 				ArrowUp : 38, 
- 				ArrowLeft : 37 
- 			};
- 			
- */
-
-	window.onkeydown = function(event)
+window.onkeydown = function(event)
+{
+	var queryEle = document.getElementsByName('q')[0];
+	var keyCode = event.keyCode;
+	console.log(keyCode);
+	if(queryEle != document.activeElement)
 	{
-		var queryEle = document.getElementsByTagName('input').namedItem('q');
-		var keyCode = event.keyCode;
-		if(queryEle != document.activeElement)
-		{
-			queryEle.selectionStart = queryEle.selectionEnd = queryEle.value.length;
-			queryEle.focus();
-		}
+		if(keyCode===8) queryEle.value = '';
+		queryEle.selectionStart = queryEle.selectionEnd = queryEle.value.length;
+		queryEle.focus();
 	}
+}
 
