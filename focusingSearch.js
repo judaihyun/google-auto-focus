@@ -6,7 +6,6 @@ window.onkeydown = function(event)
 {
 	var queryEle = document.getElementsByName('q')[0];
 	var keyCode = event.keyCode;
-	console.log(keyCode);
 	if(queryEle != document.activeElement)
 	{
 		if(keyCode===8) queryEle.value = '';
