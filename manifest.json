@@ -1,6 +1,6 @@
   {
     "name": "google autofocus",
-    "version": "1.1",
+    "version": "1.2",
     "description": "auto focusing search box!",
     "permissions": ["declarativeContent","storage", "tabs", "activeTab"],
     "content_scripts":[
